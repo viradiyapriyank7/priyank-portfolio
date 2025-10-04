@@ -12,58 +12,47 @@ const ProjectsPage = () => {
   }, []);
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Kiran Beauty Shop",
       description:
-        "A full-featured online shopping platform with payment integration, user authentication, and admin dashboard. Built with React, Node.js, and MongoDB.",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "A modern billing platform built for beauty shops with product management, billing, and receipt generation. Features include secure login, invoice history, and a clean, user-friendly dashboard.",
+      image: "/assets/kiranBeautyShop.png",
+      tags: ["Next JS", "Supabase"],
     },
     {
-      title: "Task Management App",
+      title: "Namish Marketing",
       description:
-        "A collaborative project management tool with real-time updates, team collaboration features, and progress tracking. Built with Next.js and Supabase.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
-      tags: ["Next.js", "Supabase", "Real-time"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "Namish Marketing – Digital Marketing Agency Website A modern, responsive website designed to showcase services, boost client trust, and drive leads with a clean orange-white theme and engaging CTAs.",
+      image: "/assets/namishMarketing.png",
+      tags: ["Next.js"],
+      liveUrl: "https://www.namishmarketing.com/",
+      githubUrl: "https://github.com/hiajaysingh/NamishMarketing",
+    },
+
+    {
+      title: "PixelCraft Studio",
+      description:
+        "A sleek, modern website built for a photography studio, featuring service highlights, portfolio showcase, client testimonials, and elegant design elements to capture the essence of premium photography.",
+      image: "/assets/pixelCraft.png",
+      tags: ["Next Js", "Tailwind CSS"],
+      liveUrl: "https://pixelcraft-studio.vercel.app/",
+      githubUrl: "https://github.com/viradiyapriyank7/pixel-craft",
     },
     {
-      title: "Social Media Dashboard",
+      title: "Ceramic Tiles & Interior Design Website",
       description:
-        "An analytics dashboard for social media metrics with data visualization, automated reporting, and multi-platform integration.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      tags: ["React", "Chart.js", "API Integration"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "A premium, dark-themed website crafted to showcase elegant ceramic collections, modern interiors, and versatile tile solutions with a focus on style, quality, and user experience.",
+      image: "/assets/tiles.png",
+      tags: ["Html", "Css", "Js", "Jquery"],
     },
     {
-      title: "Portfolio Website Builder",
+      title: "ArtisticTouch – Mehendi & Nail Art",
       description:
         "A drag-and-drop website builder for creating professional portfolios with customizable templates and hosting options.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
-      tags: ["React", "Tailwind CSS", "AWS"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "AI Content Generator",
-      description:
-        "An AI-powered content creation tool that generates blog posts, social media content, and marketing copy using advanced NLP models.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
-      tags: ["Python", "OpenAI", "React", "FastAPI"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Fitness Tracking App",
-      description:
-        "A comprehensive fitness application with workout plans, nutrition tracking, progress analytics, and social features for motivation.",
-      image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop",
-      tags: ["React Native", "Firebase", "HealthKit"],
-      liveUrl: "#",
-      githubUrl: "#",
+      image:
+        "/assets/Mehendi_Nails.png",
+      tags: ["Next JS", "Tailwind CSS"],
+      liveUrl: "https://mehendi-nail-art.vercel.app",
+      githubUrl: "https://github.com/viradiyapriyank7/mehendi-nail-Art",
     },
   ];
 
@@ -73,7 +62,10 @@ const ProjectsPage = () => {
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/10" />
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+        <div
+          className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        />
       </div>
 
       {/* Simple Header */}
@@ -89,19 +81,19 @@ const ProjectsPage = () => {
           </div>
         </div>
       </header>
-      
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-4 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 -z-10">
-          <img 
-            src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&h=600&fit=crop" 
-            alt="Projects Background" 
+          <img
+            src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&h=600&fit=crop"
+            alt="Projects Background"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-secondary/90 via-secondary/80 to-background" />
         </div>
-        
+
         <div className="container mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6 animate-fade-in border border-white/20">
             <Sparkles size={16} />
@@ -111,8 +103,9 @@ const ProjectsPage = () => {
             Featured Projects
           </h1>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto animate-fade-in">
-            Explore my collection of web applications, from e-commerce platforms to AI-powered tools. 
-            Each project showcases modern technologies and best practices.
+            Explore my collection of web applications, from e-commerce platforms
+            to AI-powered tools. Each project showcases modern technologies and
+            best practices.
           </p>
         </div>
       </section>
@@ -136,18 +129,40 @@ const ProjectsPage = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/50 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100">
                     <div className="flex gap-3">
-                      <Button size="lg" className="shadow-lg" asChild>
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink size={18} className="mr-2" />
-                          Live Demo
-                        </a>
-                      </Button>
-                      <Button size="lg" variant="outline" className="bg-background/90 hover:bg-background shadow-lg" asChild>
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                          <Github size={18} className="mr-2" />
-                          Code
-                        </a>
-                      </Button>
+                      {project.githubUrl && project.liveUrl ? (
+                        <>
+                          <Button size="lg" className="shadow-lg" asChild>
+                            <a
+                              href={project.liveUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <ExternalLink size={18} className="mr-2" />
+                              Live Demo
+                            </a>
+                          </Button>
+                          <Button
+                            size="lg"
+                            variant="outline"
+                            className="bg-background/90 hover:bg-background shadow-lg"
+                            asChild
+                          >
+                            <a
+                              href={project.githubUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <Github size={18} className="mr-2" />
+                              Code
+                            </a>
+                          </Button>
+                        </>
+                      ) : (
+                        <p className="text-sm text-white italic">
+                          For security reasons, Live Demo and Code cannot be
+                          shared.
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -185,12 +200,11 @@ const ProjectsPage = () => {
                 Let's Build Something Amazing
               </h2>
               <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
-                Have a project in mind? I'd love to help bring your ideas to life with clean code and beautiful design.
+                Have a project in mind? I'd love to help bring your ideas to
+                life with clean code and beautiful design.
               </p>
               <Button size="lg" className="text-lg px-8 py-6" asChild>
-                <a href="/#contact">
-                  Get In Touch
-                </a>
+                <a href="/#contact">Get In Touch</a>
               </Button>
             </div>
           </div>

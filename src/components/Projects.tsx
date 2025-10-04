@@ -6,41 +6,39 @@ import { Link } from "react-router-dom";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Kiran Beauty Shop",
       description:
-        "A full-featured online shopping platform with payment integration, user authentication, and admin dashboard. Built with React, Node.js, and MongoDB.",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "A modern billing platform built for beauty shops with product management, billing, and receipt generation. Features include secure login, invoice history, and a clean, user-friendly dashboard.",
+      image: "/assets/kiranBeautyShop.png",
+      tags: ["Next JS", "Supabase"],
+    },
+   {
+      title: "Namish Marketing",
+      description:
+        "Namish Marketing – Digital Marketing Agency Website A modern, responsive website designed to showcase services, boost client trust, and drive leads with a clean orange-white theme and engaging CTAs.",
+      image: "/assets/namishMarketing.png",
+      tags: ["Next.js"],
+      liveUrl: "https://www.namishmarketing.com/",
+      githubUrl: "https://github.com/hiajaysingh/NamishMarketing",
     },
     {
-      title: "Task Management App",
+      title: "PixelCraft Studio",
       description:
-        "A collaborative project management tool with real-time updates, team collaboration features, and progress tracking. Built with Next.js and Supabase.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
-      tags: ["Next.js", "Supabase", "Real-time"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "A sleek, modern website built for a photography studio, featuring service highlights, portfolio showcase, client testimonials, and elegant design elements to capture the essence of premium photography.",
+      image: "/assets/pixelCraft.png",
+      tags: ["Next Js", "Tailwind CSS"],
+      liveUrl: "https://pixelcraft-studio.vercel.app/",
+      githubUrl: "https://github.com/viradiyapriyank7/pixel-craft",
     },
+
     {
-      title: "Social Media Dashboard",
+      title: "Ceramic Tiles & Interior Design Website",
       description:
-        "An analytics dashboard for social media metrics with data visualization, automated reporting, and multi-platform integration.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      tags: ["React", "Chart.js", "API Integration"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "A premium, dark-themed website crafted to showcase elegant ceramic collections, modern interiors, and versatile tile solutions with a focus on style, quality, and user experience.",
+      image: "/assets/tiles.png",
+      tags: ["Html", "Css", "Js","Jquery"],
     },
-    {
-      title: "Portfolio Website Builder",
-      description:
-        "A drag-and-drop website builder for creating professional portfolios with customizable templates and hosting options.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
-      tags: ["React", "Tailwind CSS", "AWS"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
+    
   ];
 
   return (
@@ -71,11 +69,13 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="flex gap-2">
-                    <Button size="sm" variant="secondary" asChild>
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink size={16} />
-                        Live Demo
-                      </a>
+                    {project.githubUrl && project.liveUrl ? (
+                      <>
+                      <Button size="sm" variant="secondary" asChild>
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink size={16} />
+                          Live Demo
+                        </a>
                     </Button>
                     <Button size="sm" variant="outline" asChild>
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -83,6 +83,13 @@ const Projects = () => {
                         Code
                       </a>
                     </Button>
+                    </>
+                    ) : (
+                        <p className="text-sm text-white italic">
+                          For security reasons, Live Demo and Code cannot be
+                          shared.
+                        </p>
+                      )}
                   </div>
                 </div>
               </div>
