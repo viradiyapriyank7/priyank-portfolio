@@ -149,51 +149,76 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Overlay */}
         {isOpen && (
-          <div className="md:hidden pb-4 animate-fade-in">
-            {navItems.map((item) => {
-              const isProjectsPage = item.id === "projects";
-              const isActive = isProjectsPage 
-                ? location.pathname === "/projects" || (location.pathname === "/" && activeSection === "projects")
-                : location.pathname === "/" && activeSection === item.id;
-              
-              if (isProjectsPage) {
-                return (
-                  <Link
-                    key={item.id}
-                    to="/projects"
-                    onClick={() => setIsOpen(false)}
-                    className={`block py-3 text-sm font-medium transition-colors hover:text-primary ${
-                      isActive ? "text-primary" : "text-foreground/70"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              }
-              
-              return (
-                <a
-                  key={item.id}
-                  href={`#${item.id}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    if (location.pathname !== "/") {
-                      window.location.href = `/#${item.id}`;
-                    } else {
-                      scrollToSection(item.id);
+          <div className="md:hidden fixed inset-0 z-40 bg-black/50 backdrop-blur-sm animate-fade-in" onClick={() => setIsOpen(false)}>
+            <div className="absolute top-20 left-4 right-4 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden animate-scale-in">
+              <div className="px-6 py-4">
+                <div className="space-y-1">
+                  {navItems.map((item, index) => {
+                    const isProjectsPage = item.id === "projects";
+                    const isActive = isProjectsPage 
+                      ? location.pathname === "/projects" || (location.pathname === "/" && activeSection === "projects")
+                      : location.pathname === "/" && activeSection === item.id;
+                    
+                    if (isProjectsPage) {
+                      return (
+                        <Link
+                          key={item.id}
+                          to="/projects"
+                          onClick={() => setIsOpen(false)}
+                          className={`flex items-center px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 hover:bg-gray-50 hover:scale-[1.02] ${
+                            isActive 
+                              ? "text-primary bg-primary/10 border border-primary/20" 
+                              : "text-gray-700 hover:text-primary"
+                          }`}
+                          style={{ animationDelay: `${index * 50}ms` }}
+                        >
+                          <span className="flex-1">{item.label}</span>
+                          {isActive && (
+                            <div className="w-2 h-2 bg-primary rounded-full"></div>
+                          )}
+                        </Link>
+                      );
                     }
-                    setIsOpen(false);
-                  }}
-                  className={`block py-3 text-sm font-medium transition-colors hover:text-primary ${
-                    isActive ? "text-primary" : "text-foreground/70"
-                  }`}
-                >
-                  {item.label}
-                </a>
-              );
-            })}
+                    
+                    return (
+                      <a
+                        key={item.id}
+                        href={`#${item.id}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          if (location.pathname !== "/") {
+                            window.location.href = `/#${item.id}`;
+                          } else {
+                            scrollToSection(item.id);
+                          }
+                          setIsOpen(false);
+                        }}
+                        className={`flex items-center px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 hover:bg-gray-50 hover:scale-[1.02] ${
+                          isActive 
+                            ? "text-primary bg-primary/10 border border-primary/20" 
+                            : "text-gray-700 hover:text-primary"
+                        }`}
+                        style={{ animationDelay: `${index * 50}ms` }}
+                      >
+                        <span className="flex-1">{item.label}</span>
+                        {isActive && (
+                          <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        )}
+                      </a>
+                    );
+                  })}
+                </div>
+                
+                {/* Footer */}
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <div className="text-center">
+                    <span className="text-sm text-gray-500">Portfolio by PV</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>
