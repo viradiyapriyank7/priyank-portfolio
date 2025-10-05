@@ -101,6 +101,16 @@ All colors MUST be HSL.
   html {
     scroll-behavior: smooth;
   }
+  
+  /* Hide scrollbar for all browsers */
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  
+  *::-webkit-scrollbar {
+    display: none; /* WebKit browsers (Chrome, Safari, Edge) */
+  }
 }
 
 @layer utilities {
