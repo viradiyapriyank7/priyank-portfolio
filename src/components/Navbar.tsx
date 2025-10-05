@@ -151,7 +151,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation Overlay */}
         {isOpen && (
-          <div className="md:hidden fixed inset-0 z-40 bg-black/50 backdrop-blur-sm animate-fade-in" onClick={() => setIsOpen(false)}>
+          <div className="md:hidden fixed inset-0 z-40 bg-black/50 animate-fade-in" onClick={() => setIsOpen(false)}>
             <div className="absolute top-20 left-4 right-4 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden animate-scale-in">
               <div className="px-6 py-4">
                 <div className="space-y-1">

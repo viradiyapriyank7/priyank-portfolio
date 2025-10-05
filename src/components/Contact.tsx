@@ -127,7 +127,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2 text-foreground">Phone</h3>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+99313202075"
                     className="text-foreground/70 hover:text-primary transition-colors"
                   >
                     +91 9313202075
