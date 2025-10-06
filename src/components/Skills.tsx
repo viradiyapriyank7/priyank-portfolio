@@ -78,7 +78,7 @@ const Skills = () => {
     {
       icon: (
         <img 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" 
+          src="https://cncwebworld.com/mumbai/assets/img/mern.svg" 
           alt="MERN Stack" 
           className="w-10 h-10"
         />
