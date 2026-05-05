@@ -19,6 +19,14 @@ const ProjectsPage = () => {
       tags: ["Next JS", "Supabase"],
     },
     {
+      title: "FarmCalc",
+      description:
+        "FarmCalc is a simple web app designed to manage farm-related finances and worker records in one place. It helps track expenses, advances, income, and automatically calculates final settlements.",
+      image: "/assets/farmcalc.png",
+      tags: ["Html", "Css", "Js", "Jquery"],
+      liveUrl: "https://farmingcalc.vercel.app/",
+    },
+    {
       title: "Namish Marketing",
       description:
         "Namish Marketing – Digital Marketing Agency Website A modern, responsive website designed to showcase services, boost client trust, and drive leads with a clean orange-white theme and engaging CTAs.",
@@ -54,6 +62,7 @@ const ProjectsPage = () => {
       liveUrl: "https://mehendi-nail-art.vercel.app",
       githubUrl: "https://github.com/viradiyapriyank7/mehendi-nail-Art",
     },
+
   ];
 
   return (
@@ -129,7 +138,7 @@ const ProjectsPage = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/50 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100">
                     <div className="flex gap-3">
-                      {project.githubUrl && project.liveUrl ? (
+                      {project.liveUrl ? (
                         <>
                           <Button size="lg" className="shadow-lg" asChild>
                             <a
@@ -141,21 +150,23 @@ const ProjectsPage = () => {
                               Live Demo
                             </a>
                           </Button>
-                          <Button
-                            size="lg"
-                            variant="outline"
-                            className="bg-background/90 hover:bg-background shadow-lg"
-                            asChild
-                          >
-                            <a
-                              href={project.githubUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
+                          {project.githubUrl && (
+                            <Button
+                              size="lg"
+                              variant="outline"
+                              className="bg-background/90 hover:bg-background shadow-lg"
+                              asChild
                             >
-                              <Github size={18} className="mr-2" />
-                              Code
-                            </a>
-                          </Button>
+                              <a
+                                href={project.githubUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <Github size={18} className="mr-2" />
+                                Code
+                              </a>
+                            </Button>
+                          )}
                         </>
                       ) : (
                         <p className="text-sm text-white italic">

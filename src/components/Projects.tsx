@@ -12,7 +12,7 @@ const Projects = () => {
       image: "/assets/kiranBeautyShop.png",
       tags: ["Next JS", "Supabase"],
     },
-   {
+    {
       title: "Namish Marketing",
       description:
         "Namish Marketing – Digital Marketing Agency Website A modern, responsive website designed to showcase services, boost client trust, and drive leads with a clean orange-white theme and engaging CTAs.",
@@ -32,13 +32,14 @@ const Projects = () => {
     },
 
     {
-      title: "Ceramic Tiles & Interior Design Website",
+      title: "FarmCalc",
       description:
-        "A premium, dark-themed website crafted to showcase elegant ceramic collections, modern interiors, and versatile tile solutions with a focus on style, quality, and user experience.",
-      image: "/assets/tiles.png",
-      tags: ["Html", "Css", "Js","Jquery"],
+        "FarmCalc is a simple web app designed to manage farm-related finances and worker records in one place. It helps track expenses, advances, income, and automatically calculates final settlements.",
+      image: "/assets/farmcalc.png",
+      tags: ["Html", "Css", "Js", "Jquery"],
+      liveUrl: "https://farmingcalc.vercel.app/",
     },
-    
+
   ];
 
   return (
@@ -69,27 +70,29 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="flex gap-2">
-                    {project.githubUrl && project.liveUrl ? (
+                    {project.liveUrl ? (
                       <>
-                      <Button size="sm" variant="secondary" asChild>
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink size={16} />
-                          Live Demo
-                        </a>
-                    </Button>
-                    <Button size="sm" variant="outline" asChild>
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github size={16} />
-                        Code
-                      </a>
-                    </Button>
-                    </>
+                        <Button size="sm" variant="secondary" asChild>
+                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink size={16} />
+                            Live Demo
+                          </a>
+                        </Button>
+                        {project.githubUrl && (
+                          <Button size="sm" variant="outline" asChild>
+                            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                              <Github size={16} />
+                              Code
+                            </a>
+                          </Button>
+                        )}
+                      </>
                     ) : (
-                        <p className="text-sm text-white italic">
-                          For security reasons, Live Demo and Code cannot be
-                          shared.
-                        </p>
-                      )}
+                      <p className="text-sm text-white italic">
+                        For security reasons, Live Demo and Code cannot be
+                        shared.
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>

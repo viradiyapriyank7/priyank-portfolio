@@ -55,9 +55,9 @@ const Skills = () => {
     },
     {
       icon: (
-        <img 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" 
-          alt="MySQL" 
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+          alt="MySQL"
           className="w-10 h-10"
         />
       ),
@@ -66,9 +66,9 @@ const Skills = () => {
     },
     {
       icon: (
-        <img 
-          src="https://i.pinimg.com/474x/cb/03/e4/cb03e4961860f0271e6ac73e663f26fa.jpg" 
-          alt="Supabase" 
+        <img
+          src="https://i.pinimg.com/474x/cb/03/e4/cb03e4961860f0271e6ac73e663f26fa.jpg"
+          alt="Supabase"
           className="w-10 h-10"
         />
       ),
@@ -77,9 +77,9 @@ const Skills = () => {
     },
     {
       icon: (
-        <img 
-          src="https://cncwebworld.com/mumbai/assets/img/mern.svg" 
-          alt="MERN Stack" 
+        <img
+          src="https://cncwebworld.com/mumbai/assets/img/mern.svg"
+          alt="MERN Stack"
           className="w-10 h-10"
         />
       ),
@@ -88,15 +88,37 @@ const Skills = () => {
     },
     {
       icon: (
-        <img 
-          src="https://upload.wikimedia.org/wikipedia/commons/a/a8/NestJS.svg" 
-          alt="NestJS" 
+        <img
+          src="https://www.srvrlss.io/provider-images/square/convex-150x150.webp"
+          alt="Convex"
           className="w-10 h-10"
         />
       ),
-      name: "NestJS",
-      description: "Progressive Node.js framework",
+      name: "Convex",
+      description: "Scalable Realtime Backend for LLM and AI Applications",
     },
+    {
+      icon: (
+        <img
+          src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-PlFCd_VBcALKReO3ZaOEg.png"
+          alt="Langchain"
+          className="w-40 h-40"
+        />
+      ),
+      name: "Langchain",
+      description: "an open source framework with a pre-built agent architecture and integrations for any model or tool",
+    },
+    {
+      icon: (
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWyoi1hACfTJEIfIAyri0YvHyb7B-ZKHKzFQ&s"
+          alt="Langgraph"
+          className="w-40 h-40"
+        />
+      ),
+      name: "Langgraph",
+      description: "an open source AI agent framework designed to build, deploy and manage complex generative AI agent workflows",
+    }
   ];
 
   return (

@@ -6,12 +6,12 @@ import { toast } from "@/hooks/use-toast";
 const Resume = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/assets/priyank-viradiya.pdf"; // put your PDF inside /public folder
+    link.href = "/assets/PRIYANK_RESUME.pdf"; // put your PDF inside /public folder
     link.download = "Resume.pdf"; // name for the downloaded file
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    
+
     // Show success popup
     toast({
       title: "Download Successful!",
